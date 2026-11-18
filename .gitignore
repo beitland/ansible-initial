@@ -1,0 +1,18 @@
+# Ansible
+*.retry
+
+# Ansible Vault passwords
+.vault_pass
+.vault_pass*
+
+# SSH private keys
+id_rsa
+id_ed25519
+*.pem
+*.key
+
+# Environment files
+.env
+
+# macOS
+.DS_Store

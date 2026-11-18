@@ -1,0 +1,50 @@
+all:
+  children:
+    usa:
+      children:
+        iowa:
+          children:
+            anamosa:
+              hosts:
+                cisco-2900-01:
+                  ansible_host: 72.13.29.84
+            cedar_rapids:
+              hosts:
+                cisco-2940-01:
+                  ansible_host: 72.13.29.84
+        
+        california:
+          children:
+            san_jose:
+              hosts:
+                cisco-2900-02:
+                  ansible_host: 72.13.29.84
+            san_francisco:
+              hosts:
+                cisco-2940-02:
+                  ansible_host: 72.13.29.84
+
+      vars:
+        ansible_network_os: cisco.ios.ios
+        ansible_user: brett.eitland
+
+    europe:
+      children:
+        germany:
+          children:
+            berlin:
+              hosts:
+                cisco-2900-03:
+                  ansible_host: 71.13.29.84
+
+        france:
+          children:
+            paris:
+              hosts:
+                cisco-2940-03:
+                  ansible_host: 71.13.29.84
+
+      vars:
+        ansible_network_os: cisco.ios.ios
+        ansible_user: brett.eitland
+
